@@ -3,6 +3,9 @@ import Sale from "./_components/sections/Sale";
 import CategoryFilter from "./_components/sections/CategoryFilter";
 import ProductsGrid from "./_components/layout/ProductsGrid";
 import SideBar from "./_components/layout/SideBar";
+
+import { products } from "@/data/products";
+
 export default function Home() {
   return (
     <>
@@ -10,7 +13,7 @@ export default function Home() {
       <CategoryFilter />
       <div className="flex container mx-auto gap-8 py-5">
         <SideBar />
-        <ProductsGrid />
+        <ProductsGrid products={products} />
       </div>
       <Sale />
     </>

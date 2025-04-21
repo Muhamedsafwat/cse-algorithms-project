@@ -14,6 +14,7 @@ export const products = [
     rating: 4.8,
     brand: brands[0], // Apple
     category: categories[0], // Mobile phones
+    image: "/products/iphone14pro.png",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const products = [
     rating: 4.7,
     brand: brands[0], // Apple
     category: categories[0], // Mobile phones
+    image: "/products/iphone14.png",
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const products = [
     rating: 4.8,
     brand: brands[1], // Samsung
     category: categories[0], // Mobile phones
+    image: "/products/samsungs23ultra.png",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const products = [
     rating: 4.6,
     brand: brands[1], // Samsung
     category: categories[0], // Mobile phones
+    image: "/products/samsungs23.png",
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ export const products = [
     rating: 4.5,
     brand: brands[8], // Xiaomi
     category: categories[0], // Mobile phones
+    image: "/products/xiaomi13pro.png",
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ export const products = [
     rating: 4.4,
     brand: brands[8], // Xiaomi
     category: categories[0], // Mobile phones
+    image: "/products/xiaomi13.png",
   },
   {
     id: 7,
@@ -62,6 +68,7 @@ export const products = [
     rating: 4.3,
     brand: brands[9], // Realme
     category: categories[0], // Mobile phones
+    image: "/products/realmegt3.png",
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const products = [
     rating: 4.2,
     brand: brands[9], // Realme
     category: categories[0], // Mobile phones
+    image: "/products/realmeneo5.png",
   },
   {
     id: 9,
@@ -78,6 +86,7 @@ export const products = [
     rating: 4.6,
     brand: brands[0], // Apple
     category: categories[0], // Mobile phones
+    image: "/products/iphone13.png",
   },
   {
     id: 10,
@@ -86,6 +95,7 @@ export const products = [
     rating: 4.3,
     brand: brands[1], // Samsung
     category: categories[0], // Mobile phones
+    image: "/products/samsunga54.png",
   },
 
   // Laptops
@@ -96,6 +106,7 @@ export const products = [
     rating: 4.9,
     brand: brands[0], // Apple
     category: categories[1], // Laptops
+    image: "/products/macpro16.png",
   },
   {
     id: 12,
@@ -104,6 +115,7 @@ export const products = [
     rating: 4.8,
     brand: brands[0], // Apple
     category: categories[1], // Laptops
+    image: "/products/macairm2.png",
   },
   {
     id: 13,
@@ -112,6 +124,7 @@ export const products = [
     rating: 4.7,
     brand: brands[2], // Razer
     category: categories[1], // Laptops
+    image: "/products/razerblade18.png",
   },
   {
     id: 14,
@@ -120,6 +133,7 @@ export const products = [
     rating: 4.6,
     brand: brands[2], // Razer
     category: categories[1], // Laptops
+    image: "/products/razerblade15.png",
   },
   {
     id: 15,
@@ -128,6 +142,7 @@ export const products = [
     rating: 4.5,
     brand: brands[3], // Sony
     category: categories[1], // Laptops
+    image: "/products/sonyvaioz.png",
   },
   {
     id: 16,
@@ -136,6 +151,7 @@ export const products = [
     rating: 4.4,
     brand: brands[8], // Xiaomi
     category: categories[1], // Laptops
+    image: "/products/xiaomibook16.png",
   },
   {
     id: 17,
@@ -144,6 +160,7 @@ export const products = [
     rating: 4.8,
     brand: brands[0], // Apple
     category: categories[1], // Laptops
+    image: "/products/macpro16.png",
   },
   {
     id: 18,
@@ -152,6 +169,7 @@ export const products = [
     rating: 4.5,
     brand: brands[2], // Razer
     category: categories[1], // Laptops
+    image: "/products/razerstealth13.png",
   },
   {
     id: 19,
@@ -160,6 +178,7 @@ export const products = [
     rating: 4.6,
     brand: brands[3], // Sony
     category: categories[1], // Laptops
+    image: "/products/sonyvaioz.png",
   },
   {
     id: 20,
@@ -168,6 +187,7 @@ export const products = [
     rating: 4.3,
     brand: brands[8], // Xiaomi
     category: categories[1], // Laptops
+    image: "/products/xiaomiair13.png",
   },
 
   // Smart watches
@@ -178,6 +198,7 @@ export const products = [
     rating: 4.8,
     brand: brands[0], // Apple
     category: categories[2], // Smart watches
+    image: "/products/applewatch8.png",
   },
   {
     id: 22,
@@ -186,6 +207,7 @@ export const products = [
     rating: 4.9,
     brand: brands[0], // Apple
     category: categories[2], // Smart watches
+    image: "/products/applewatchultra.png",
   },
   {
     id: 23,
@@ -194,6 +216,7 @@ export const products = [
     rating: 4.7,
     brand: brands[1], // Samsung
     category: categories[2], // Smart watches
+    image: "/products/galaxywatch6pro.png",
   },
   {
     id: 24,
@@ -202,284 +225,319 @@ export const products = [
     rating: 4.6,
     brand: brands[1], // Samsung
     category: categories[2], // Smart watches
+    image: "/products/samsungwatch5.png",
   },
   {
     id: 25,
-    name: "Sony SmartWatch 5",
-    price: 349,
+    name: "Apple Watch SE",
+    price: 249,
     rating: 4.5,
-    brand: brands[3], // Sony
+    brand: brands[0], // Apple
     category: categories[2], // Smart watches
+    image: "/products/applewatchse.png",
   },
   {
     id: 26,
-    name: "Xiaomi Watch S1 Pro",
+    name: "Xiaomi Watch S1",
     price: 199,
     rating: 4.4,
     brand: brands[8], // Xiaomi
     category: categories[2], // Smart watches
+    image: "/products/xiaomiwatchs1.png",
   },
   {
     id: 27,
-    name: "Apple Watch SE",
-    price: 249,
-    rating: 4.6,
-    brand: brands[0], // Apple
+    name: "Sony Watch 5",
+    price: 299,
+    rating: 4.3,
+    brand: brands[3], // Sony
     category: categories[2], // Smart watches
+    image: "/products/sonywatch5.png",
   },
   {
     id: 28,
-    name: "Samsung Galaxy Watch 5",
-    price: 279,
-    rating: 4.5,
-    brand: brands[1], // Samsung
-    category: categories[2], // Smart watches
-  },
-  {
-    id: 29,
-    name: "Sony SmartWatch 4",
-    price: 299,
-    rating: 4.4,
+    name: "Sony Watch 4",
+    price: 249,
+    rating: 4.2,
     brand: brands[3], // Sony
     category: categories[2], // Smart watches
-  },
-  {
-    id: 30,
-    name: "Xiaomi Watch S1",
-    price: 149,
-    rating: 4.3,
-    brand: brands[8], // Xiaomi
-    category: categories[2], // Smart watches
+    image: "/products/sonywatch4.png",
   },
 
   // Accessories
   {
-    id: 31,
+    id: 29,
     name: "Apple AirTag",
     price: 29,
     rating: 4.7,
     brand: brands[0], // Apple
     category: categories[3], // Accessories
+    image: "/products/airtag.png",
   },
   {
-    id: 32,
+    id: 30,
     name: "Apple Pencil 2",
     price: 129,
     rating: 4.8,
     brand: brands[0], // Apple
     category: categories[3], // Accessories
+    image: "/products/applepincle2.png",
   },
   {
-    id: 33,
-    name: "Samsung Galaxy Buds Pro",
-    price: 229,
+    id: 31,
+    name: "Samsung Galaxy Buds2",
+    price: 149,
     rating: 4.6,
     brand: brands[1], // Samsung
     category: categories[3], // Accessories
+    image: "/products/samsungbuds2.png",
   },
   {
-    id: 34,
+    id: 32,
     name: "Razer Mouse Pad",
     price: 49,
     rating: 4.5,
     brand: brands[2], // Razer
     category: categories[3], // Accessories
+    image: "/products/razerpad.png",
   },
   {
-    id: 35,
+    id: 33,
     name: "Sony Camera Bag",
     price: 79,
     rating: 4.4,
     brand: brands[3], // Sony
     category: categories[3], // Accessories
+    image: "/products/sonybag.png",
   },
   {
-    id: 36,
+    id: 34,
     name: "Canon Camera Strap",
     price: 29,
     rating: 4.3,
     brand: brands[4], // Canon
     category: categories[3], // Accessories
+    image: "/products/canonstrap.png",
+  },
+  {
+    id: 35,
+    name: "Nikon Camera Bag",
+    price: 69,
+    rating: 4.2,
+    brand: brands[5], // Nikon
+    category: categories[3], // Accessories
+    image: "/products/nikonbag.png",
+  },
+  {
+    id: 36,
+    name: "JBL Speaker Stand",
+    price: 39,
+    rating: 4.1,
+    brand: brands[6], // JBL
+    category: categories[3], // Accessories
+    image: "/products/jblstand.png",
   },
   {
     id: 37,
-    name: "Nikon Camera Bag",
-    price: 89,
-    rating: 4.5,
-    brand: brands[5], // Nikon
+    name: "Beats Case",
+    price: 49,
+    rating: 4.0,
+    brand: brands[7], // Beats
     category: categories[3], // Accessories
+    image: "/products/beatscase.png",
   },
   {
     id: 38,
-    name: "JBL Speaker Stand",
-    price: 39,
-    rating: 4.4,
-    brand: brands[6], // JBL
-    category: categories[3], // Accessories
-  },
-  {
-    id: 39,
-    name: "Beats Carrying Case",
-    price: 49,
-    rating: 4.3,
-    brand: brands[7], // Beats
-    category: categories[3], // Accessories
-  },
-  {
-    id: 40,
     name: "Xiaomi Power Bank",
     price: 39,
-    rating: 4.6,
+    rating: 4.3,
     brand: brands[8], // Xiaomi
     category: categories[3], // Accessories
+    image: "/products/xiaomipowerbank.png",
   },
 
   // Headphones
   {
-    id: 41,
-    name: "Apple AirPods Pro 2",
+    id: 39,
+    name: "AirPods Pro 2",
     price: 249,
     rating: 4.8,
     brand: brands[0], // Apple
     category: categories[4], // Headphones
+    image: "/products/airpodspro2.png",
   },
   {
-    id: 42,
-    name: "Apple AirPods Max",
+    id: 40,
+    name: "AirPods Max",
     price: 549,
     rating: 4.7,
     brand: brands[0], // Apple
     category: categories[4], // Headphones
+    image: "/products/airpodsmax.png",
   },
   {
-    id: 43,
+    id: 41,
     name: "Samsung Galaxy Buds Live",
     price: 169,
     rating: 4.6,
     brand: brands[1], // Samsung
     category: categories[4], // Headphones
+    image: "/products/galaxybudslive.png",
   },
   {
-    id: 44,
+    id: 42,
     name: "Razer Kraken V3",
     price: 99,
     rating: 4.5,
     brand: brands[2], // Razer
     category: categories[4], // Headphones
+    image: "/products/razerkrakenv3.png",
   },
   {
-    id: 45,
-    name: "Sony WH-1000XM5",
-    price: 399,
+    id: 43,
+    name: "Sony WH-1000XM4",
+    price: 349,
     rating: 4.9,
     brand: brands[3], // Sony
     category: categories[4], // Headphones
+    image: "/products/sonywh.png",
+  },
+  {
+    id: 44,
+    name: "JBL Live 660NC",
+    price: 199,
+    rating: 4.4,
+    brand: brands[6], // JBL
+    category: categories[4], // Headphones
+    image: "/products/jbllive.png",
+  },
+  {
+    id: 45,
+    name: "Beats Studio Pro",
+    price: 349,
+    rating: 4.3,
+    brand: brands[7], // Beats
+    category: categories[4], // Headphones
+    image: "/products/beatsstudio.png",
   },
   {
     id: 46,
-    name: "JBL Live 660NC",
-    price: 199,
-    rating: 4.6,
-    brand: brands[6], // JBL
+    name: "Xiaomi Buds 4 Pro",
+    price: 129,
+    rating: 4.2,
+    brand: brands[8], // Xiaomi
     category: categories[4], // Headphones
+    image: "/products/xiaomibuds4pro.png",
   },
   {
     id: 47,
-    name: "Beats Studio Pro",
-    price: 349,
-    rating: 4.7,
-    brand: brands[7], // Beats
+    name: "Realme Buds Air 3",
+    price: 79,
+    rating: 4.1,
+    brand: brands[9], // Realme
     category: categories[4], // Headphones
+    image: "/products/realmebudsair3.png",
   },
   {
     id: 48,
-    name: "Xiaomi Redmi Buds 4 Pro",
-    price: 79,
-    rating: 4.4,
-    brand: brands[8], // Xiaomi
-    category: categories[4], // Headphones
-  },
-  {
-    id: 49,
-    name: "Realme Buds Air 3",
-    price: 69,
-    rating: 4.3,
-    brand: brands[9], // Realme
-    category: categories[4], // Headphones
-  },
-  {
-    id: 50,
-    name: "Apple AirPods 3",
+    name: "AirPods 3",
     price: 179,
-    rating: 4.6,
+    rating: 4.4,
     brand: brands[0], // Apple
     category: categories[4], // Headphones
+    image: "/products/airpods3.png",
   },
 
   // Cameras
   {
-    id: 51,
-    name: "Sony Alpha A7 IV",
-    price: 2499,
+    id: 49,
+    name: "Sony Alpha 1",
+    price: 6499,
     rating: 4.9,
     brand: brands[3], // Sony
     category: categories[5], // Cameras
+    image: "/products/sonya1.png",
   },
   {
-    id: 52,
-    name: "Canon EOS R6",
-    price: 2299,
-    rating: 4.8,
-    brand: brands[4], // Canon
-    category: categories[5], // Cameras
-  },
-  {
-    id: 53,
-    name: "Nikon Z6 II",
-    price: 1999,
-    rating: 4.8,
-    brand: brands[5], // Nikon
-    category: categories[5], // Cameras
-  },
-  {
-    id: 54,
-    name: "Sony Alpha A7C",
+    id: 50,
+    name: "Sony Alpha 7C",
     price: 1799,
+    rating: 4.8,
+    brand: brands[3], // Sony
+    category: categories[5], // Cameras
+    image: "/products/sonya7c.png",
+  },
+  {
+    id: 51,
+    name: "Sony Alpha 7 IV",
+    price: 2499,
     rating: 4.7,
     brand: brands[3], // Sony
     category: categories[5], // Cameras
+    image: "/products/sonyalpha74.png",
   },
   {
-    id: 55,
+    id: 52,
+    name: "Sony Alpha 6600",
+    price: 1199,
+    rating: 4.6,
+    brand: brands[3], // Sony
+    category: categories[5], // Cameras
+    image: "/products/sonya6600.png",
+  },
+  {
+    id: 53,
+    name: "Canon EOS R6",
+    price: 2499,
+    rating: 4.8,
+    brand: brands[4], // Canon
+    category: categories[5], // Cameras
+    image: "/products/canonr6.png",
+  },
+  {
+    id: 54,
     name: "Canon EOS R7",
     price: 1499,
     rating: 4.7,
     brand: brands[4], // Canon
     category: categories[5], // Cameras
+    image: "/products/canonr7.png",
+  },
+  {
+    id: 55,
+    name: "Canon EOS 90D",
+    price: 1199,
+    rating: 4.6,
+    brand: brands[4], // Canon
+    category: categories[5], // Cameras
+    image: "/products/canon90d.png",
   },
   {
     id: 56,
-    name: "Nikon Z5",
-    price: 1399,
-    rating: 4.6,
-    brand: brands[5], // Nikon
+    name: "Canon RF 24-70mm",
+    price: 2299,
+    rating: 4.9,
+    brand: brands[4], // Canon
     category: categories[5], // Cameras
+    image: "/products/canonlens.png",
   },
   {
     id: 57,
-    name: "Sony Alpha A6600",
-    price: 1199,
-    rating: 4.6,
-    brand: brands[3], // Sony
+    name: "Nikon Z6 II",
+    price: 1999,
+    rating: 4.8,
+    brand: brands[5], // Nikon
     category: categories[5], // Cameras
+    image: "/products/nikonz62.png",
   },
   {
     id: 58,
-    name: "Canon EOS 90D",
-    price: 1199,
-    rating: 4.5,
-    brand: brands[4], // Canon
+    name: "Nikon Z5",
+    price: 1399,
+    rating: 4.7,
+    brand: brands[5], // Nikon
     category: categories[5], // Cameras
+    image: "/products/nikonz5.png",
   },
   {
     id: 59,
@@ -488,14 +546,16 @@ export const products = [
     rating: 4.9,
     brand: brands[5], // Nikon
     category: categories[5], // Cameras
+    image: "/products/nikon850.png",
   },
   {
     id: 60,
-    name: "Sony Alpha A1",
-    price: 6499,
-    rating: 4.9,
+    name: "Sony NP-FZ100",
+    price: 79,
+    rating: 4.5,
     brand: brands[3], // Sony
     category: categories[5], // Cameras
+    image: "/products/sonybattery.png",
   },
 
   // Additional Mobile phones
@@ -506,6 +566,7 @@ export const products = [
     rating: 4.8,
     brand: brands[0], // Apple
     category: categories[0], // Mobile phones
+    image: "/products/iphone14promax.png",
   },
   {
     id: 62,
@@ -514,6 +575,7 @@ export const products = [
     rating: 4.7,
     brand: brands[1], // Samsung
     category: categories[0], // Mobile phones
+    image: "/products/samsungzfold5.png",
   },
   {
     id: 63,
@@ -522,6 +584,7 @@ export const products = [
     rating: 4.6,
     brand: brands[1], // Samsung
     category: categories[0], // Mobile phones
+    image: "/products/samsungzflip5.png",
   },
   {
     id: 64,
@@ -530,6 +593,7 @@ export const products = [
     rating: 4.5,
     brand: brands[8], // Xiaomi
     category: categories[0], // Mobile phones
+    image: "/products/xiaomi13tpro.png",
   },
   {
     id: 65,
@@ -538,6 +602,7 @@ export const products = [
     rating: 4.4,
     brand: brands[9], // Realme
     category: categories[0], // Mobile phones
+    image: "/products/realmegt5.png",
   },
 
   // Additional Laptops
@@ -548,6 +613,7 @@ export const products = [
     rating: 4.7,
     brand: brands[0], // Apple
     category: categories[1], // Laptops
+    image: "/products/macpro13m2.png",
   },
   {
     id: 67,
@@ -556,6 +622,7 @@ export const products = [
     rating: 4.6,
     brand: brands[2], // Razer
     category: categories[1], // Laptops
+    image: "/products/razerblade14.png",
   },
   {
     id: 68,
@@ -564,6 +631,7 @@ export const products = [
     rating: 4.5,
     brand: brands[3], // Sony
     category: categories[1], // Laptops
+    image: "/products/sonyvaiosx12.png",
   },
   {
     id: 69,
@@ -572,6 +640,7 @@ export const products = [
     rating: 4.4,
     brand: brands[8], // Xiaomi
     category: categories[1], // Laptops
+    image: "/products/xiaomibook14.png",
   },
   {
     id: 70,
@@ -580,6 +649,7 @@ export const products = [
     rating: 4.6,
     brand: brands[0], // Apple
     category: categories[1], // Laptops
+    image: "/products/macairm1.png",
   },
 
   // Additional Smart watches
@@ -590,6 +660,7 @@ export const products = [
     rating: 4.7,
     brand: brands[0], // Apple
     category: categories[2], // Smart watches
+    image: "/products/applewatch7.png",
   },
   {
     id: 72,
@@ -598,6 +669,7 @@ export const products = [
     rating: 4.6,
     brand: brands[1], // Samsung
     category: categories[2], // Smart watches
+    image: "/products/galaxywatch5pro.png",
   },
   {
     id: 73,
@@ -606,6 +678,7 @@ export const products = [
     rating: 4.4,
     brand: brands[3], // Sony
     category: categories[2], // Smart watches
+    image: "/products/sonywatch3.png",
   },
   {
     id: 74,
@@ -614,6 +687,7 @@ export const products = [
     rating: 4.3,
     brand: brands[8], // Xiaomi
     category: categories[2], // Smart watches
+    image: "/products/xiaomiwatches2.png",
   },
   {
     id: 75,
@@ -622,6 +696,7 @@ export const products = [
     rating: 4.5,
     brand: brands[0], // Apple
     category: categories[2], // Smart watches
+    image: "/products/applewatch6.png",
   },
 
   // Additional Accessories
@@ -632,6 +707,7 @@ export const products = [
     rating: 4.6,
     brand: brands[0], // Apple
     category: categories[3], // Accessories
+    image: "/products/applemagickeyboard.png",
   },
   {
     id: 77,
@@ -640,6 +716,7 @@ export const products = [
     rating: 4.5,
     brand: brands[1], // Samsung
     category: categories[3], // Accessories
+    image: "/products/samsungtabs9keyboard.png",
   },
   {
     id: 78,
@@ -648,6 +725,7 @@ export const products = [
     rating: 4.7,
     brand: brands[2], // Razer
     category: categories[3], // Accessories
+    image: "/products/razerkeyboard.png",
   },
   {
     id: 79,
@@ -656,6 +734,7 @@ export const products = [
     rating: 4.4,
     brand: brands[3], // Sony
     category: categories[3], // Accessories
+    image: "/products/sonybattery.png",
   },
   {
     id: 80,
@@ -664,6 +743,7 @@ export const products = [
     rating: 4.8,
     brand: brands[4], // Canon
     category: categories[3], // Accessories
+    image: "/products/canonlens.png",
   },
 
   // Additional Headphones
@@ -674,6 +754,7 @@ export const products = [
     rating: 4.5,
     brand: brands[0], // Apple
     category: categories[4], // Headphones
+    image: "/products/airpods2.png",
   },
   {
     id: 82,
@@ -682,6 +763,7 @@ export const products = [
     rating: 4.6,
     brand: brands[1], // Samsung
     category: categories[4], // Headphones
+    image: "/products/samsungbuds2.png",
   },
   {
     id: 83,
@@ -690,6 +772,7 @@ export const products = [
     rating: 4.5,
     brand: brands[2], // Razer
     category: categories[4], // Headphones
+    image: "/products/razerblacksharkv2.png",
   },
   {
     id: 84,
@@ -698,6 +781,7 @@ export const products = [
     rating: 4.8,
     brand: brands[3], // Sony
     category: categories[4], // Headphones
+    image: "/products/sonywh.png",
   },
   {
     id: 85,
@@ -706,6 +790,7 @@ export const products = [
     rating: 4.5,
     brand: brands[6], // JBL
     category: categories[4], // Headphones
+    image: "/products/jbltune.png",
   },
 
   // Additional Cameras
@@ -716,6 +801,7 @@ export const products = [
     rating: 4.9,
     brand: brands[4], // Canon
     category: categories[5], // Cameras
+    image: "/products/canonr5.png",
   },
   {
     id: 87,
@@ -724,6 +810,7 @@ export const products = [
     rating: 4.8,
     brand: brands[5], // Nikon
     category: categories[5], // Cameras
+    image: "/products/nikonz72.png",
   },
   {
     id: 88,
@@ -732,6 +819,7 @@ export const products = [
     rating: 4.9,
     brand: brands[3], // Sony
     category: categories[5], // Cameras
+    image: "/products/sonya7r4.png",
   },
   {
     id: 89,
@@ -740,6 +828,7 @@ export const products = [
     rating: 4.6,
     brand: brands[4], // Canon
     category: categories[5], // Cameras
+    image: "/products/canonr10.png",
   },
   {
     id: 90,
@@ -748,6 +837,7 @@ export const products = [
     rating: 4.5,
     brand: brands[5], // Nikon
     category: categories[5], // Cameras
+    image: "/products/nikonz30.png",
   },
 
   // Final products to reach 100
@@ -758,6 +848,7 @@ export const products = [
     rating: 4.7,
     brand: brands[0], // Apple
     category: categories[0], // Mobile phones
+    image: "/products/iphone14pro.png",
   },
   {
     id: 92,
@@ -766,6 +857,7 @@ export const products = [
     rating: 4.4,
     brand: brands[1], // Samsung
     category: categories[0], // Mobile phones
+    image: "/products/samsungs23.png",
   },
   {
     id: 93,
@@ -774,6 +866,7 @@ export const products = [
     rating: 4.7,
     brand: brands[2], // Razer
     category: categories[1], // Laptops
+    image: "/products/razerblade18.png",
   },
   {
     id: 94,
@@ -782,6 +875,7 @@ export const products = [
     rating: 4.7,
     brand: brands[3], // Sony
     category: categories[4], // Headphones
+    image: "/products/sonywh.png",
   },
   {
     id: 95,
@@ -790,6 +884,7 @@ export const products = [
     rating: 4.5,
     brand: brands[4], // Canon
     category: categories[5], // Cameras
+    image: "/products/canon90d.png",
   },
   {
     id: 96,
@@ -798,6 +893,7 @@ export const products = [
     rating: 4.6,
     brand: brands[5], // Nikon
     category: categories[5], // Cameras
+    image: "/products/nikon850.png",
   },
   {
     id: 97,
@@ -806,6 +902,7 @@ export const products = [
     rating: 4.6,
     brand: brands[6], // JBL
     category: categories[3], // Accessories
+    image: "/products/jbllive.png",
   },
   {
     id: 98,
@@ -814,6 +911,7 @@ export const products = [
     rating: 4.7,
     brand: brands[7], // Beats
     category: categories[4], // Headphones
+    image: "/products/beatsstudio.png",
   },
   {
     id: 99,
@@ -822,6 +920,7 @@ export const products = [
     rating: 4.4,
     brand: brands[8], // Xiaomi
     category: categories[0], // Mobile phones
+    image: "/products/xiaomi13pro.png",
   },
   {
     id: 100,
@@ -830,5 +929,6 @@ export const products = [
     rating: 4.3,
     brand: brands[9], // Realme
     category: categories[0], // Mobile phones
+    image: "/products/realmegt3.png",
   },
 ];
