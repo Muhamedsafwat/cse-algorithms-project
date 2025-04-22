@@ -2,6 +2,7 @@
   "name": "cse-algorithms-project",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,5 +17,18 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhamedsafwat/cse-algorithms-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muhamedsafwat/cse-algorithms-project/issues"
+  },
+  "homepage": "https://github.com/Muhamedsafwat/cse-algorithms-project#readme"
 }
