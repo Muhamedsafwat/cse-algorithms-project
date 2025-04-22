@@ -1,6 +1,6 @@
 // --------- Imports --------- //
-import { brands } from "./brands";
-import { categories } from "./categories";
+import { brands } from "./brands.js";
+import { categories } from "./categories.js";
 // You can access the brand name by using brands[index].name
 // You can access the category name by using categories[index].name
 
