@@ -6,7 +6,7 @@ import { brands } from "@/data/brands";
 
 const Footer = () => {
   return (
-    <div className="bg-neutral-950 text-white py-10">
+    <div className="bg-neutral-950 text-white pt-10">
       <div className="container mx-auto flex justify-between">
         <div className="w-1/2">
           <Image
@@ -37,6 +37,10 @@ const Footer = () => {
           </div>
         ))}
       </div>
+      <p className="text-center text-sm py-3 border-t bg-neutral-900 border-neutral-800 mt-5 text-neutral-600">
+        No copywrites are reserved, the design is stolen from figma community.
+        Built By CSE #27 ZU
+      </p>
     </div>
   );
 };
