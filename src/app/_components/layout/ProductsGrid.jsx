@@ -4,7 +4,7 @@ import ProductCard from "../cards/ProductCard";
 
 const ProductsGrid = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 9; // Show 6 products per page (2 rows of 3)
+  const productsPerPage = 12; // Show 6 products per page (2 rows of 3)
 
   // Calculate total pages
   const totalPages = Math.ceil(products.length / productsPerPage);
@@ -52,7 +52,7 @@ const ProductsGrid = ({ products }) => {
 
   return (
     <div className="flex flex-col flex-1">
-      <div className="text-center py-5 grid grid-cols-3 gap-5 flex-1">
+      <div className="text-center py-5 grid grid-cols-4 gap-5 flex-1">
         {currentProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

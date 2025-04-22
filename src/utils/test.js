@@ -1,6 +1,6 @@
 // --------- imports --------- //
 import filtering from "./filtering.js";
-import { products } from "./products.js";
+import { products } from "../data/products.js";
 
 const {
   filterByCategory,

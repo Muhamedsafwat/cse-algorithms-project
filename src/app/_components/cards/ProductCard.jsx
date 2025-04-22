@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="text-center bg-neutral-100 p-5 rounded-lg shadow-md flex flex-col">
+    <div className="text-center bg-neutral-100 p-5 rounded-lg shadow-md hover:shadow-lg flex flex-col hover:scale-[1.02] duration-200">
       <div className="w-full h-40 relative">
         <Image
           src={product.image}

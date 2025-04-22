@@ -1,5 +1,5 @@
 //imports
-import { products } from "./products.js";
+import { products } from "../data/products.js";
 
 //filter by category
 export function filterByCategory(products, categoryName) {
