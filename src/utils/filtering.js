@@ -54,12 +54,6 @@ export function applyFilters(products, filters) {
   return filteredProducts;
 }
 
-//generates lists of unique categories, brands, or any other property
-export function getUniqueValues(products, property) {
-  const values = products.map((product) => product[property]?.name);
-  return [...new Set(values)];
-}
-
 //------multi-value filters------//
 export function filterByMultipleCategories(products, categories) {
   return products.filter((product) =>
@@ -71,35 +65,6 @@ export function filterByMultipleBrands(products, brands) {
   return products.filter((product) => brands.includes(product.brand.name));
 }
 
-/*
-export function filterByAvailability(products) {
-  return products.filter((product) => product.isAvailable);
-}
-
-export function filterByDiscount(products) {
-  return products.filter((product) => product.discount > 0);
-}
-
-export function filterByNewArrivals(products) {
-  const oneMonthAgo = new Date();
-  oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-  return products.filter(
-    (product) => new Date(product.createdAt) > oneMonthAgo
-  );
-}
-*/
-
-// to clear all filters
-export function clearFilters() {
-  return {
-    category: null,
-    brand: null,
-    minPrice: null,
-    maxPrice: null,
-    minRating: null,
-  };
-}
-
 export default {
   filterByCategory,
   filterByBrand,
@@ -108,9 +73,4 @@ export default {
   applyFilters,
   filterByMultipleCategories,
   filterByMultipleBrands,
-  // filterByNewArrivals,
-  //filterByDiscount,
-  //filterByAvailability,
-  getUniqueValues,
-  clearFilters,
 };

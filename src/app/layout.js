@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@smastrom/react-rating/style.css";
 
 import Navbar from "./_components/navigation/Navbar";
 import Footer from "./_components/navigation/Footer";
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
+        data-theme="mytheme"
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen overflow-x-hidden bg-neutral-50`}
       >
         <Navbar />

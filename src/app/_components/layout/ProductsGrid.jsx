@@ -51,7 +51,33 @@ const ProductsGrid = ({ products }) => {
   };
 
   return (
-    <div className="flex flex-col flex-1">
+    <div className="flex flex-col flex-1 mt-8">
+      <div className="flex flex-row items-center">
+        <p>
+          Selected <span className="font-bold">{products.length}</span> products
+        </p>
+        <div className="flex flex-row items-center gap-4 w-1/2 ml-auto">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+            className="border border-gray-300 rounded-md p-2 flex-1"
+          />
+          <select
+            name="sort"
+            id="sort"
+            className="border border-gray-300 rounded-md p-2 flex-1"
+          >
+            <option value="az">Name: A to Z</option>
+            <option value="za">Name: Z to A</option>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+            <option value="asc">Rating: Low to High</option>
+            <option value="desc">Rating: High to Low</option>
+          </select>
+        </div>
+      </div>
       <div className="text-center py-5 grid grid-cols-4 gap-5 flex-1">
         {currentProducts.map((product) => (
           <ProductCard key={product.id} product={product} />

@@ -13,31 +13,31 @@ export const categories = [
   {
     id: 1,
     name: "Mobile phones",
-    icon: <CiMobile3 size={40} />,
+    icon: <CiMobile3 size={30} />,
   },
   {
     id: 2,
     name: "Laptops",
-    icon: <CiLaptop size={40} />,
+    icon: <CiLaptop size={30} />,
   },
   {
     id: 3,
     name: "Smart watches",
-    icon: <BsSmartwatch size={40} />,
+    icon: <BsSmartwatch size={30} />,
   },
   {
     id: 4,
     name: "Accessories",
-    icon: <CiKeyboard size={40} />,
+    icon: <CiKeyboard size={30} />,
   },
   {
     id: 5,
     name: "Headphones",
-    icon: <CiHeadphones size={40} />,
+    icon: <CiHeadphones size={30} />,
   },
   {
     id: 6,
     name: "Cameras",
-    icon: <CiCamera size={40} />,
+    icon: <CiCamera size={30} />,
   },
 ];
