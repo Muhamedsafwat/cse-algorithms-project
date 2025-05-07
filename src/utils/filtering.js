@@ -1,26 +1,72 @@
 //imports
 import { products } from "../data/products.js";
+import { countingSort } from "./countingSort.js";
+import { bucketSort } from "./bucketSort.js";
+import {
+  binarySearchFirstGreaterOrEqual,
+  binarySearchLastLessOrEqual,
+} from "./binarysearch.js";
 
 //filter by category
 export function filterByCategory(products, categoryName) {
-  return products.filter((product) => product.category.name === categoryName);
+  const result = [];
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].category.name === categoryName) {
+      result.push(products[i]);
+    }
+  }
+  return result;
 }
 
 //filter by brand
 export function filterByBrand(products, brandName) {
-  return products.filter((product) => product.brand.name === brandName);
+  const result = [];
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].brand?.name === brandName) {
+      result.push(products[i]);
+    }
+  }
+  return result;
 }
 
-//filter by price
+//filter by price-------------------------
+// first: sorting prices => countng sort
+function sortProductsByPrice(products) {
+  return countingSort(products, (p) => p.price);
+}
+//filtering => binary search
 export function filterByPrice(products, minPrice, maxPrice) {
-  return products.filter(
-    (product) => product.price >= minPrice && product.price <= maxPrice
+  const sorted = sortProductsByPrice(products);
+  const start = binarySearchFirstGreaterOrEqual(
+    sorted,
+    (p) => p.price,
+    minPrice,
+    (a, b) => a - b
   );
+
+  const end = binarySearchLastLessOrEqual(sorted, (p) => p.price, maxPrice);
+  if (start === -1 || end === -1 || start > end) return [];
+  return sorted.slice(start, end + 1);
 }
 
-//filter by rating
+//filter by rating------------------------
+//first: sorting rates=> bucket sort
+function sortProductsByRating(products) {
+  const sorted = bucketSort(products, (p) => p.rating);
+  return sorted;
+}
+//filtering => binary search
 export function filterByRating(products, minRating) {
-  return products.filter((product) => product.rating >= minRating);
+  const sorted = sortProductsByRating(products);
+  const start = binarySearchFirstGreaterOrEqual(
+    sorted,
+    (p) => p.rating,
+    minRating,
+    (a, b) => a - b
+  );
+
+  if (start === -1) return [];
+  return sorted.slice(start);
 }
 
 //-----applying filters-------//
@@ -32,12 +78,12 @@ export function applyFilters(products, filters) {
     filteredProducts = filterByCategory(filteredProducts, filters.category);
   }
 
-  //by brand
+  // by brand
   if (filters.brand) {
     filteredProducts = filterByBrand(filteredProducts, filters.brand);
   }
 
-  //by price
+  // by price
   if (filters.minPrice !== undefined && filters.maxPrice !== undefined) {
     filteredProducts = filterByPrice(
       filteredProducts,
@@ -55,14 +101,25 @@ export function applyFilters(products, filters) {
 }
 
 //------multi-value filters------//
-export function filterByMultipleCategories(products, categories) {
-  return products.filter((product) =>
-    categories.includes(product.category.name)
-  );
+export function filterByMultipleCategories(products, categoryNames) {
+  const result = [];
+  for (let i = 0; i < products.length; i++) {
+    if (categoryNames.includes(products[i].category.name)) {
+      result.push(products[i]);
+    }
+  }
+  return result;
 }
 
-export function filterByMultipleBrands(products, brands) {
-  return products.filter((product) => brands.includes(product.brand.name));
+//-----
+export function filterByMultipleBrands(products, brandNames) {
+  const result = [];
+  for (let i = 0; i < products.length; i++) {
+    if (brandNames.includes(products[i].brand?.name)) {
+      result.push(products[i]);
+    }
+  }
+  return result;
 }
 
 export default {

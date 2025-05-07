@@ -2,59 +2,35 @@
 import filtering from "./filtering.js";
 import { products } from "../data/products.js";
 
-const {
-  filterByCategory,
-  filterByBrand,
-  filterByPrice,
-  filterByRating,
-  applyFilters,
-  filterByMultipleCategories,
-  filterByMultipleBrands,
-  // filterByNewArrivals,
-  //filterByDiscount,
-  //filterByAvailability,
-  getUniqueValues,
-  clearFilters,
-} = filtering;
+console.log("===== Test: filterByBrand (Apple) =====");
+console.log(filtering.filterByBrand(products, "Apple"));
 
-/*
-console.log("Testing filterByCategory...");
-const filteredByCategory = filterByCategory(products, "Mobile phones");
-console.log("Filtered by Category:", filteredByCategory);
+console.log("===== Test: filterByCategory (Smart watches) =====");
+console.log(filtering.filterByCategory(products, "Smart watches"));
 
-console.log("\nTesting filterByBrand...");
-const filteredByBrand = filterByBrand(products, "Apple");
-console.log("Filtered by Brand:", filteredByBrand);
+console.log("===== Test: filterByPrice (700 - 1000) =====");
+console.log(filtering.filterByPrice(products, 700, 1000));
 
-console.log("\nTesting filterByPriceRange...");
-const filteredByPrice = filterByPrice(products, 1000, 2500);
-console.log("Filtered by Price Range:", filteredByPrice);
+console.log("===== Test: filterByRating (min 4.5) =====");
+console.log(filtering.filterByRating(products, 4.5));
 
-console.log("\nTesting filterByRating...");
-const filteredByRating = filterByRating(products, 4.8);
-console.log("Filtered by Rating:", filteredByRating);
+console.log(
+  "===== Test: filterByMultipleCategories (Smart watches, Laptops) ====="
+);
+console.log(
+  filtering.filterByMultipleCategories(products, ["Smart watches", "Laptops"])
+);
 
-console.log("\nTesting applyFilters...");
-const filters = {
-  category: "Mobile phones",
-  brand: "Apple",
-  minPrice: 500,
-  maxPrice: 1500,
-};
-const appliedFilters = applyFilters(products, filters);
-console.log("Applied Filters:", appliedFilters);
+console.log("===== Test: filterByMultipleBrands (Apple, Samsung) =====");
+console.log(filtering.filterByMultipleBrands(products, ["Apple", "Samsung"]));
 
-console.log("\nTesting getUniqueValues...");
-const uniqueCategories = getUniqueValues(products, "category");
-const uniqueBrands = getUniqueValues(products, "brand");
-console.log("Unique Categories:", uniqueCategories);
-console.log("Unique Brands:", uniqueBrands);
-*/
-const filteredByCategories = filterByMultipleCategories(products, [
-  "Mobile phones",
-  "Laptops",
-]);
-console.log("Filtered by Multiple Categories:", filteredByCategories);
-
-const filteredByBrands = filterByMultipleBrands(products, ["Apple", "Samsung"]);
-console.log("Filtered by Multiple Brands:", filteredByBrands);
+console.log("===== Test: applyFilters =====");
+console.log(
+  filtering.applyFilters(products, {
+    category: "Headphones",
+    brand: "Apple",
+    minPrice: 200,
+    maxPrice: 700,
+    minRating: 4.5,
+  })
+);
