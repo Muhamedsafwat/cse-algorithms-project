@@ -1,6 +1,6 @@
 // --------- imports --------- //
 import filtering from "./filtering.js";
-import { products } from "./products.js";
+import { products } from "../data/products.js";
 
 console.log("===== Test: filterByBrand (Apple) =====");
 console.log(filtering.filterByBrand(products, "Apple"));
