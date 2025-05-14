@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -13,6 +15,5 @@
 }
 
 body {
-
   font-family: Arial, Helvetica, sans-serif;
 }
