@@ -6,8 +6,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import CategoryCard from "../cards/CategoryCard";
 import { categories } from "@/data/categories";
 
-const CategoryFilter = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+const CategoryFilter = ({ selectedCategory, setSelectedCategory }) => {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };

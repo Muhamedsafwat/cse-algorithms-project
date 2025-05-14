@@ -1,5 +1,4 @@
 //imports
-import { products } from "../data/products.js";
 import { countingSort } from "./countingSort.js";
 import { bucketSort } from "./bucketSort.js";
 import {
