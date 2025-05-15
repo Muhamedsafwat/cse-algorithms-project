@@ -6,8 +6,13 @@ import { CiShoppingCart } from "react-icons/ci";
 import CategoryCard from "../cards/CategoryCard";
 import { categories } from "@/data/categories";
 
-const CategoryFilter = ({ selectedCategory, setSelectedCategory }) => {
+const CategoryFilter = ({
+  selectedCategory,
+  setSelectedCategory,
+  resetFilters,
+}) => {
   const handleCategoryClick = (category) => {
+    resetFilters();
     setSelectedCategory(category);
   };
   return (
@@ -20,7 +25,7 @@ const CategoryFilter = ({ selectedCategory, setSelectedCategory }) => {
           icon={<CiShoppingCart size={40} />}
           name="All"
           isActive={selectedCategory == "All"}
-          handleClick={handleCategoryClick}
+          handleClick={() => handleCategoryClick("All")}
         />
         {categories.map((item) => (
           <CategoryCard

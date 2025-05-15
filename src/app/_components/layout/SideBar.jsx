@@ -5,7 +5,7 @@ import { Rating } from "@smastrom/react-rating";
 
 import { brands } from "@/data/brands";
 
-const SideBar = ({ filter, setFilter }) => {
+const SideBar = ({ filter, setFilter, applyFilters, resetFilters }) => {
   //rating change
   const handleRatingChange = (value) => {
     setFilter({ ...filter, rating: value });
@@ -26,23 +26,6 @@ const SideBar = ({ filter, setFilter }) => {
       brand: filter.brand.includes(brandName)
         ? filter.brand.filter((brand) => brand !== brandName)
         : [...filter.brand, brandName],
-    });
-  };
-
-  //apply filters
-  const handleApplyFilters = () => {
-    console.log(filter);
-  };
-
-  //clear filters
-  const handleClearFilters = () => {
-    setFilter({
-      price: {
-        min: 0,
-        max: 50000,
-      },
-      rating: 0,
-      brand: [],
     });
   };
 
@@ -110,13 +93,13 @@ const SideBar = ({ filter, setFilter }) => {
       <div className="my-5 flex gap-2">
         <button
           className="btn btn-success !text-white btn-sm "
-          onClick={handleApplyFilters}
+          onClick={applyFilters}
         >
           Apply Filters
         </button>
         <button
           className="btn btn-error !text-white btn-sm "
-          onClick={handleClearFilters}
+          onClick={resetFilters}
         >
           Clear
         </button>

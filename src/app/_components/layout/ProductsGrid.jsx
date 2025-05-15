@@ -2,17 +2,41 @@
 import React, { useState } from "react";
 import ProductCard from "../cards/ProductCard";
 
+import {
+  quicksortByPrice,
+  quicksortByRating,
+  quicksortByName,
+} from "@/utils/quickSort";
+
 const ProductsGrid = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12; // Show 6 products per page (2 rows of 3)
+  const [sortedProducts, setSortedProducts] = useState(products);
 
+  // Sort Products
+  const sortProducts = (sortBy) => {
+    console.log(sortBy);
+    if (sortBy == "price-asc") {
+      setSortedProducts(quicksortByPrice(products));
+    } else if (sortBy == "price-desc") {
+      setSortedProducts(quicksortByPrice(products).reverse());
+    } else if (sortBy == "rating-asc") {
+      setSortedProducts(quicksortByRating(products));
+    } else if (sortBy == "rating-desc") {
+      setSortedProducts(quicksortByRating(products).reverse());
+    } else if (sortBy == "az") {
+      setSortedProducts(quicksortByName(products));
+    } else if (sortBy == "za") {
+      setSortedProducts(quicksortByName(products).reverse());
+    }
+  };
   // Calculate total pages
   const totalPages = Math.ceil(products.length / productsPerPage);
 
   // Get current products
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = products.slice(
+  const currentProducts = sortedProducts.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
@@ -54,7 +78,8 @@ const ProductsGrid = ({ products }) => {
     <div className="flex flex-col flex-1 mt-8">
       <div className="flex flex-row items-center">
         <p>
-          Selected <span className="font-bold">{products.length}</span> products
+          Selected <span className="font-bold">{sortedProducts.length}</span>{" "}
+          products
         </p>
         <div className="flex flex-row items-center gap-4 w-1/2 ml-auto">
           <input
@@ -68,13 +93,14 @@ const ProductsGrid = ({ products }) => {
             name="sort"
             id="sort"
             className="border border-gray-300 rounded-md p-2 flex-1"
+            onChange={(e) => sortProducts(e.target.value)}
           >
             <option value="az">Name: A to Z</option>
             <option value="za">Name: Z to A</option>
-            <option value="asc">Price: Low to High</option>
-            <option value="desc">Price: High to Low</option>
-            <option value="asc">Rating: Low to High</option>
-            <option value="desc">Rating: High to Low</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating-asc">Rating: Low to High</option>
+            <option value="rating-desc">Rating: High to Low</option>
           </select>
         </div>
       </div>

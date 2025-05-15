@@ -68,49 +68,7 @@ export function filterByRating(products, minRating) {
   return sorted.slice(start);
 }
 
-//-----applying filters-------//
-export function applyFilters(products, filters) {
-  let filteredProducts = [...products];
-
-  // by category
-  if (filters.category) {
-    filteredProducts = filterByCategory(filteredProducts, filters.category);
-  }
-
-  // by brand
-  if (filters.brand) {
-    filteredProducts = filterByBrand(filteredProducts, filters.brand);
-  }
-
-  // by price
-  if (filters.minPrice !== undefined && filters.maxPrice !== undefined) {
-    filteredProducts = filterByPrice(
-      filteredProducts,
-      filters.minPrice,
-      filters.maxPrice
-    );
-  }
-
-  // by rating
-  if (filters.minRating !== undefined) {
-    filteredProducts = filterByRating(filteredProducts, filters.minRating);
-  }
-
-  return filteredProducts;
-}
-
-//------multi-value filters------//
-export function filterByMultipleCategories(products, categoryNames) {
-  const result = [];
-  for (let i = 0; i < products.length; i++) {
-    if (categoryNames.includes(products[i].category.name)) {
-      result.push(products[i]);
-    }
-  }
-  return result;
-}
-
-//-----
+//filter by multiple brands
 export function filterByMultipleBrands(products, brandNames) {
   const result = [];
   for (let i = 0; i < products.length; i++) {
@@ -126,7 +84,5 @@ export default {
   filterByBrand,
   filterByPrice,
   filterByRating,
-  applyFilters,
-  filterByMultipleCategories,
   filterByMultipleBrands,
 };
