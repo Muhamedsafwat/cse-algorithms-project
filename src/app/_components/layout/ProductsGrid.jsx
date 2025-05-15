@@ -17,6 +17,9 @@ const ProductsGrid = ({ products }) => {
   const [sortedProducts, setSortedProducts] = useState(
     quicksortByName(products)
   );
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState(sortedProducts);
+
   const [isUserPreferencesPopupOpen, setIsUserPreferencesPopupOpen] =
     useState(false);
 
@@ -26,45 +29,80 @@ const ProductsGrid = ({ products }) => {
     rating: 1,
   });
 
+  const handleSearch = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    setSearchQuery(searchTerm);
+    if (searchTerm === "") {
+      setSearchResults(sortedProducts);
+    } else {
+      const filteredProducts = sortedProducts.filter((product) =>
+        product.name.toLowerCase().includes(searchTerm)
+      );
+      setSearchResults(filteredProducts);
+    }
+  };
+
   // Update sortedProducts when products prop changes
   useEffect(() => {
-    setSortedProducts(quicksortByName(products));
+    const newSortedProducts = quicksortByName(products);
+    setSortedProducts(newSortedProducts);
+    // Update search results with new sorted products
+    if (searchQuery === "") {
+      setSearchResults(newSortedProducts);
+    } else {
+      const filteredProducts = newSortedProducts.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(filteredProducts);
+    }
     setCurrentPage(1); // Reset to first page when products change
-  }, [products]);
+  }, [products, searchQuery]);
 
   // Sort Products
   const sortProducts = (sortBy) => {
+    let newSortedProducts;
     switch (sortBy) {
       case "pref":
-        setSortedProducts(sortByUserPreferences(products, preferences));
+        newSortedProducts = sortByUserPreferences(products, preferences);
         break;
       case "price-asc":
-        setSortedProducts(quicksortByPrice(products));
+        newSortedProducts = quicksortByPrice(products);
         break;
       case "price-desc":
-        setSortedProducts(quicksortByPrice(products).reverse());
+        newSortedProducts = quicksortByPrice(products).reverse();
         break;
       case "rating-asc":
-        setSortedProducts(quicksortByRating(products));
+        newSortedProducts = quicksortByRating(products);
         break;
       case "rating-desc":
-        setSortedProducts(quicksortByRating(products).reverse());
+        newSortedProducts = quicksortByRating(products).reverse();
         break;
       case "az":
-        setSortedProducts(quicksortByName(products));
+        newSortedProducts = quicksortByName(products);
         break;
       case "za":
-        setSortedProducts(quicksortByName(products).reverse());
+        newSortedProducts = quicksortByName(products).reverse();
         break;
+    }
+    setSortedProducts(newSortedProducts);
+
+    // Update search results with new sorted products
+    if (searchQuery === "") {
+      setSearchResults(newSortedProducts);
+    } else {
+      const filteredProducts = newSortedProducts.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(filteredProducts);
     }
   };
   // Calculate total pages
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const totalPages = Math.ceil(searchResults.length / productsPerPage);
 
   // Get current products
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = sortedProducts.slice(
+  const currentProducts = searchResults.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
@@ -111,6 +149,8 @@ const ProductsGrid = ({ products }) => {
               id="search"
               placeholder="Search"
               className="border border-gray-300 rounded-md p-2 flex-1"
+              value={searchQuery}
+              onChange={handleSearch}
             />
             <select
               name="sort"
