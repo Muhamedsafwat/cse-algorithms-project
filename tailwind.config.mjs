@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#B4151B",
+        primary: "#6C4CEF",
         secondary: "#333",
       },
     },
@@ -20,7 +20,7 @@ export default {
     themes: [
       {
         mytheme: {
-          primary: "#B4151B",
+          primary: "#6C4CEF",
           secondary: "#f6d860",
         },
       },
